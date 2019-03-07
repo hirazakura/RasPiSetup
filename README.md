@@ -9,18 +9,18 @@ PASS:raspberry
   
 ### Gitからcloneする  
 Gitをインストールする  
-`$ sudo apt-get update`  
-`$ sudo apt-get install git`  
+`sudo apt-get update`  
+`sudo apt-get install git`  
 セットアップスクリプトをcloneする  
-`$ git clone https://github.com/hirazakura/pi_setup.git`  
+`$ git clone https://github.com/hirazakura/RasPiSetup.git`  
   
 ## 使い方  
 セットアップスクリプトのフォルダに移動  
-`$ cd pi_setup`  
+`$ cd RasPiSetup`  
 スクリプトに権限をつける  
-`$ chmod +x pi_setup.sh`  
+`$ chmod +x setup.sh`  
 スクリプトの実行  
-`$ ./pi_setup.sh`  
+`$ ./setup.sh`  
   
 ### セットアップ１  
 `raspi-config`の初期設定  
@@ -40,7 +40,7 @@ Finishを選択し終了する
 `Finish`  
   
 ### セットアップ2  
-本体アップデートとVimのインストール  
+本体アップデートとVimとGitのインストール  
 #### セットアップ番号を選ぶ（2）  
 ```
 setup number:2
@@ -48,37 +48,8 @@ Ready?? >> （エンター）
 ```
   
 ### セットアップ3  
-ネットワークの設定(固定IPの設定)
-#### セットアップ番号を選ぶ（3）  
-```
-setup number:3  
-Ready?? >> （エンター）  
-```
-  
-ipアドレスを設定（例192.168.11.10）  
-固定IPの入力  
-`What ipaddress? : 192.168.11.10/24(ipアドレスを入力)`  
-デフォルトゲートウェイの入力  
-`What Default gateway? :192.168.11.1`  
-DNSの入力  
-`What DNS? : 192.168.11.1`  
-  
-### セットアップ4  
-Wi-Fiの設定
-#### セットアップ番号を選ぶ（4）  
-```
-setup number:4  
-Ready?? >> （エンター）  
-```
-  
-ルータのSSIDの登録  
-`What SSID? : SSIDの入力`  
-ルータのパスワードを入力  
-`What PASS? : パスワードの入力`  
-  
-### セットアップ5  
 新しいユーザーの作成  
-#### セットアップ番号を選ぶ（5）  
+#### セットアップ番号を選ぶ（3）  
 ```
 setup number:5  
 Ready?? >> （エンター）  
@@ -105,6 +76,29 @@ Home Phone :（空欄のままエンターを入力する）
 Other []:（空欄のままエンターを入力する）  
 Is the information correct? [Y/n] y（yを入力する）  
 ```
+  
+### セットアップ4
+pyenvとpythonのインストール  
+  
+#### セットアップ番号を選ぶ（4）
+```
+setup number:4  
+Ready?? >> （エンター）
+```  
+インストールするPythonのバーションを入力  
+`What install python version? : （バージョン入力）`
+  
+### セットアップ5
+セットアップ4を実行済みの場合は不要
+手動pythonのインストール
+
+#### セットアップ番号を選ぶ（5）
+```
+setup number:5  
+Ready?? >> （エンター）  
+```
+インストールするPythonのバーションを入力  
+`What install python version? : （バージョン入力）`
   
 ### セットアップ完了後  
 以下のIDでログイン  
